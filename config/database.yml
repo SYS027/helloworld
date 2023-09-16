@@ -16,9 +16,5 @@ test:
   database: helloworld
 
 production:
-  <<: *default
-  database: helloworld
-  username: root
-  password: 7470588990
-  host: localhost
-  socket: /var/run/mysqld/mysqld.sock
+  url: <%= ENV['DATABASE_URL'] %>
+
