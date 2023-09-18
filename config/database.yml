@@ -1,42 +1,20 @@
-# default: &default
-#   adapter: mysql2
-#   encoding: utf8mb4
-#   pool: 5
-#   username: root
-#   password: 7470588990
-#   host: localhost
-  
-
-# development:
-#   <<: *default
-#   database: helloworld
-
-# test:
-#   <<: *default
-#   database: helloworld
-
-# production:
-#    <<: *default
-#    database: helloworld
-
-
 default: &default
-adapter: postgresql
-encoding: unicode
-pool: <%= ENV.fetch(“RAILS_MAX_THREADS”) { 5 } %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: Pk@7470588990
+
 
 development:
-<<: *default
-database: helloworld
-username: postresql
-password: Pk@7470588990 
-
+  <<: *default
+  database: helloworld
+  
 test:
-<<: *default
-database: helloworld
+  <<: *default
+  database: helloworld
 
 production:
-<<: *default
-database: helloworld
-username: postresql
-password: Pk@7470588990
+  <<: *default
+  database: helloworld
+ 
