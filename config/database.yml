@@ -7,16 +7,16 @@ default: &default
 
 development:
   <<: *default
-  database: helloworld
+  database: helloworld027
   username: postgres
   password: Pk@7470588990
 
 test:
   <<: *default
-  database: helloworld
+  database: helloworld027
 
 production:
   <<: *default
-  database: helloworld
+  database: helloworld027
   username: postgres
   password: Pk@7470588990
